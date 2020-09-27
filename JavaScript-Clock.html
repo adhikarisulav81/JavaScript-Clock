@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>JavaScript Clock</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/fontawesome.all.min.css">
+
+  <script>
+    let d, date, time;
+    const format = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    setInterval(() => {
+      d = new Date();
+      date = d.toLocaleDateString(undefined, format);
+      time = d.getHours() + ' : ' + d.getMinutes() + ' min ' + ' : ' + d.getSeconds() + " sec";
+      document.getElementById('time').innerHTML = time + " - " + date;
+    }, 1000);
+  </script>
+
+</head>
+
+<body>
+  <!-- Begin Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a href="index.php" class="navbar-brand" title="JavaScript Clock.">Clock<span
+        class="navbar-text">TimeIsMoney</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" title="Dashboard"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="#" class="nav-link" title="Home">Home</a>
+        </li>
+    </div>
+  </nav>
+  <!-- End Navigation Bar -->
+
+  <!-- begin jumbotron-->
+  <div class="jumbotron bg-secondary my-5">
+    <h2 class="heading"><i class="fas fa-clock"></i> JavaScript Clock</h2>
+    <p class="clock"></p><b>Your Current Time is: </b><span id="time"></span></p>
+
+    <!-- Example split danger button -->
+    <div class="btn-group my-5">
+      <button type="button" class="btn btn-danger">Choose Country</button>
+      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Nepal</a>
+        <a class="dropdown-item" href="#">India</a>
+        <a class="dropdown-item" href="#">China</a>
+        <!-- 
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>\
+        -->
+      </div>
+    </div>
+    <a class="btn btn-success" href="#" role="button" title="Find Time">Find Time</a>
+    <a class="btn btn-dark" href="#" role="button" title="Pause Time">Pause</a>
+
+    <a class="btn btn-dark" href="#" role="button" title="Reset Time">Reset</a>
+    </p>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="js/fontawesome.min.js"></script>
+
+</body>
+
+</html>
